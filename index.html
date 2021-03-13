@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <div class="modal" id="modalWinner">
+        <div class="modal-content">
+            <h1 id="winner"></h1>
+            <button type="button" id="rematch">Volver a jugar!</button>
+        </div>
+    </div>
+    <div class="jugador-activo">
+        <h1 id="jugadorActivo"></h1>
+    </div>
+    <div id="grid-wrapper">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/modal.js"></script>
+</body>
+
+</html>

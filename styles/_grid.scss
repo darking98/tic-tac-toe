@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Turno del jugador*/
+
+.jugador-activo{
+    display: flex;
+    justify-content: center;
+}
+
+
+                    /* El grid*/
+
+#grid-wrapper{
+    display: grid;
+    height: 80vh;
+    background-color: #fff;
+    grid-template-columns: repeat(3, 140px);
+    grid-template-rows: repeat(3, 140px);
+    gap: 70px;
+    justify-content: center;
+    align-content: center;
+
+        /* Los casilleros */
+        @media (max-width:800px){
+            grid-template-rows: max-content;
+            grid-template-columns:repeat(3,max-content);
+            gap: 5px;
+        }
+
+    .cell{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height:200px;
+        width:200px;
+        background-color: #3b83bd;
+        border-radius: 10px;
+        font-size: 90px;
+
+        @media (max-width:800px){
+            height: 100px;
+            width: 100px;
+        }
+        &:hover{
+            background-color:  #061929;
+        }
+    }
+}
+

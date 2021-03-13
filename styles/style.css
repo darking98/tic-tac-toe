@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*Turno del jugador*/
+.jugador-activo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* El grid*/
+#grid-wrapper {
+  display: -ms-grid;
+  display: grid;
+  height: 80vh;
+  background-color: #fff;
+  -ms-grid-columns: (140px)[3];
+      grid-template-columns: repeat(3, 140px);
+  -ms-grid-rows: (140px)[3];
+      grid-template-rows: repeat(3, 140px);
+  gap: 70px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  /* Los casilleros */
+}
+
+@media (max-width: 800px) {
+  #grid-wrapper {
+    -ms-grid-rows: max-content;
+        grid-template-rows: -webkit-max-content;
+        grid-template-rows: max-content;
+    -ms-grid-columns: (max-content)[3];
+        grid-template-columns: repeat(3, -webkit-max-content);
+        grid-template-columns: repeat(3, max-content);
+    gap: 5px;
+  }
+}
+
+#grid-wrapper .cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  background-color: #3b83bd;
+  border-radius: 10px;
+  font-size: 90px;
+}
+
+@media (max-width: 800px) {
+  #grid-wrapper .cell {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+#grid-wrapper .cell:hover {
+  background-color: #061929;
+}
+
+/*Modal Jugadores*/
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal .modal-content {
+  background-color: #fefefe;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  font-size: 20px;
+}
+
+@media (max-width: 800px) {
+  .modal .modal-content {
+    width: 50%;
+  }
+  .modal .modal-content input[type="text"], .modal .modal-content button {
+    width: 100%;
+    padding: 10px;
+  }
+  .modal .modal-content label {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
+.modal .modal-content input[type="text"] {
+  display: block;
+  padding: 15px;
+  margin: 10px auto;
+  outline: none;
+}
+
+.modal .modal-content button {
+  width: 200px;
+  padding: 5px;
+}
+
+.modal .modal-content #warning {
+  font-size: 12px;
+  color: red;
+  display: block;
+  margin: 20px 0px;
+}
+
+/*Modal ganador*/
+#modalWinner {
+  display: none;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
